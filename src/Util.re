@@ -1,4 +1,4 @@
-let now_ts = "2019-02-25";
+let now_ts = "2020-01-01";
 
 let f2s = x => {
   let k = 10.;

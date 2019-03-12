@@ -32,10 +32,11 @@ let data : list(t) = [
   {date: "2018-09-01", value: 362.78, type_: Internet, paidby: Irene,  ts: ("2017-11-01", "2018-09-30")},
   // all equal on 2018-09-13
 
-  {date: "2018-08-16", value: 144.32, type_: EdF,      paidby: Andrey,  ts: ("2018-05-28", "2018-07-27")},
-  {date: "2018-09-26", value: 141.17, type_: EdF,      paidby: Andrey,  ts: ("2018-07-28", "2018-09-26")},
-  {date: "2018-11-26", value: 256.08, type_: EdF,      paidby: Andrey,  ts: ("2018-09-27", "2018-11-26")},
-  {date: "2019-02-08", value: 538.06, type_: EdF,      paidby: Andrey,  ts: ("2018-11-27", "2019-01-27")},
+  {date: "2018-08-16", value: 144.32, type_: EdF,      paidby: Andrey, ts: ("2018-05-28", "2018-07-27")},
+  {date: "2018-09-26", value: 141.17, type_: EdF,      paidby: Andrey, ts: ("2018-07-28", "2018-09-26")},
+  {date: "2018-11-26", value: 256.08, type_: EdF,      paidby: Andrey, ts: ("2018-09-27", "2018-11-26")},
+  {date: "2019-02-08", value: 538.06, type_: EdF,      paidby: Andrey, ts: ("2018-11-27", "2019-01-27")},
+  {date: "2019-03-12", value: 164.90, type_: Internet, paidby: Irene,  ts: ("2018-11-01", "2019-03-01")},
 
 
 ];
