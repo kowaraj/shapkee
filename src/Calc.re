@@ -34,23 +34,10 @@ let process_tr = (acc, t : Transaction.t) => {
   acc;
 };
 
-let cancel_out = (dt, dt_ret) => {
-  let r = Util.range(1, 3);
-  List.map(i=> List.map(j=> {
-    let xij = List.nth(List.nth(dt,j),i);
-    let xji = List.nth(List.nth(dt,i),j);
-    List.nth(List.nth(dt_ret,j),i) := xij^ -. xji^;
-
-  } , r), r) |> ignore;
-  dt_ret;
-};
-
-
 let debts = (pp, trlist) => {
   let n = 4;
 
   let dt1_ref = Debt.make_ref(n);
-  //let dt1 = Debt.unref(dt1_ref);
   let dt1_ref_pass = List.fold_left( process_tr, dt1_ref, trlist);
 
   let dt2_ref = Debt.clone(dt1_ref_pass);
@@ -67,11 +54,9 @@ let debts = (pp, trlist) => {
 let main = () => {
   Bill.dump();
   Occupant.dump();
-
   let tlist = List.fold_left( process_bill, [] , Bill.data);
 
   Transaction.dump();
-
   let ds : Debt.t = debts(Occupant.get_people_all(), tlist);
   
   Debt.print(ds);
