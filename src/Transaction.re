@@ -25,6 +25,8 @@ let data : list(t) = [
   {date: "2018-09-13", value: 341.50, description: "payback", from: Nicola, to_: Andrey},
   {date: "2018-09-13", value: 121.40, description: "payback", from: Nicola, to_: Irene},
   // all equal on 2018-09-13
+
+  {date: "2019-03-16", value: 304.9, description: "payback", from: Irene, to_: Andrey},
   
 ];
 
