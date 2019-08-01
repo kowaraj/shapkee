@@ -1,42 +1,31 @@
-# shapkee
+# SHared APpartement bookKEEping
 
-##  Run
+##  Run & Test locally
 
-### 1. Start the Backend to serve static files from ./public
-```
-[root@d777a1dfc437 build]# pwd
-/src/shapkee/build
-[root@d777a1dfc437 build]# ../node_modules/.bin/http-server .
-```
-This starts an http server listening on port 8080:
-```
-Starting up http-server, serving .
-Available on:
-  http://127.0.0.1:8080
-  http://172.17.0.2:8080
-```
-
-### 2. Start the bundler
+### 1. Compile ReasonML to Javascript with Bucklescript
 ```
 [root@d777a1dfc437 shapkee]# pwd
 /src/shapkee
 [root@d777a1dfc437 shapkee]# npm start
 ```
 
-### 3. Run the webpack-dev-server
+### 2. Bundle and serve with webpack
 ```
 [root@d777a1dfc437 shapkee]# pwd
 /src/shapkee
 [root@d777a1dfc437 shapkee]# npm run server
 ```
+See `package.json` for details.
 
 
+## Deploy to github.io
 
-## How To
+### 1. Copy 2 file to the XYZ github repository
 
-### Change port number for webpack-dev-server
-
-Modify `package.json`:
 ```
-    "server": "webpack-dev-server --host 0.0.0.0 --port 3001 --disable-host-check"
+[k@mbp: ~/src/shapkee ] ls -la ./build/
+-rw-r--r--   1 k  staff  1242308 Jul 28 14:46 Index.js
+-rw-r--r--   1 k  staff      248 Jul 28 14:46 index.html
 ```
+
+### 2. Visit XYZ.github.io
