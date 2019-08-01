@@ -15,6 +15,9 @@
 /src/shapkee
 [root@d777a1dfc437 shapkee]# npm run server
 ```
+
+### 3. Visit //localhost:3001
+
 See `package.json` for details.
 
 
