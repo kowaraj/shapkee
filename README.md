@@ -16,9 +16,12 @@
 [root@d777a1dfc437 shapkee]# npm run server
 ```
 
-### 3. Visit //localhost:3001
+### 3. Visit `http://localhost:3001`
 
-See `package.json` for details.
+See `package.json` for details:
+```
+    "server": "webpack-dev-server --host 0.0.0.0 --port 3001 --disable-host-check"
+```
 
 
 ## Deploy to github.io
