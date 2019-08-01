@@ -20,7 +20,7 @@
 
 See `package.json` for details:
 ```
-    "server": "webpack-dev-server --host 0.0.0.0 --port 3001 --disable-host-check"
+"server": "webpack-dev-server --host 0.0.0.0 --port 3001 --disable-host-check"
 ```
 
 
