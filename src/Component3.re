@@ -19,17 +19,15 @@ let component = ReasonReact.reducerComponent("Example");
 
 let calcs = Calc.main();
 
-let get = (p1, p2) => {
-  let v = Debt.get(calcs.dtable1, p1+1, p2+1);
-  str(Util.f2s(v^))
-};
+// let get = (p1, p2) => {
+//   let v = Debt.get(calcs.dtable1, p1+1, p2+1);
+//   str(Util.f2s(v^))
+// };
 
-let get_cout = (p1, p2) => {
-  let v = Debt.get(calcs.dtable2, p1+1, p2+1);
-  str(Util.f2s(v^))
-};
-
-
+// let get_cout = (p1, p2) => {
+//   let v = Debt.get(calcs.dtable2, p1+1, p2+1);
+//   str(Util.f2s(v^))
+// };
 
 let t1 = Table.make(calcs.dtable1, Style.table);
 let t2 = Table.make(calcs.dtable2, Style.table2);
@@ -44,7 +42,8 @@ let make = (_children) => {
     },
   
   render: _self => {
-    <div>
+
+    <div hidden=false>
       <p> {str("Format of the tables below is the following:")} </p>
       <p> {str("The rows are people who paid the bills FOR everybody. The columns show how much was paid for whom.");} </p>
       <p style=Style.t1> {str("After all the bills have been paid:");} </p>

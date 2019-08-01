@@ -51,7 +51,43 @@ let debts = (pp, trlist) => {
   ds;
 };
 
+// let cb_resolved = (x) => {
+//   Js.log("cb_resolved: ")
+//   Js.log(x);
+//   Js.log("cb_resolved -- end.")
+// }
+
+// let test_fetch2 = () => {
+
+//   let url2 = "https://gist.githubusercontent.com/kowaraj/f5af2adaefe33547949d4822ac09f863/raw/cdf12d7b9be573440a5fa6d9cbf0f925cd8bcb8f/test_for_reasonml2.json"
+
+//   Js.Promise.(
+//     Fetch.fetch(url2)
+//     |> then_(Fetch.Response.text)
+//     |> then_(text => cb_resolved(text) |> resolve)
+//   )
+//   |> Js.log;
+// };
+
+// let test_fetch = () => {
+//   Js.Promise.(
+//     FetchBasicExample.fetchUsers()
+//     |> then_(result => 
+//                     {
+//                       Js.log("-------------- !! -------------")
+//                       Js.log(result)
+//                       switch (result) {
+//                       | Some(users) => resolve( Js.log(users))
+//                       | None => resolve( Js.log("no users") )
+//                       }
+//                     })
+//     |> ignore
+//   )
+
+// };
+
 let main = () => {
+
   Bill.dump();
   Occupant.dump();
   let tlist = List.fold_left( process_bill, [] , Bill.data);
@@ -60,7 +96,25 @@ let main = () => {
   let ds : Debt.t = debts(Occupant.get_people_all(), tlist);
   
   Debt.print(ds);
+
   ds;
+  
+};
+
+let main2 = (bills) => {
+
+
+  Occupant.dump();
+  let tlist = List.fold_left( process_bill, [] , bills);
+
+  Transaction.dump();
+  let ds : Debt.t = debts(Occupant.get_people_all(), tlist);
+  
+  Debt.print(ds);
+  //test_fetch2();
+
+  ds;
+  
 };
 
 

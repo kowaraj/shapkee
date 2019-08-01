@@ -1,5 +1,5 @@
 let str = ReasonReact.string;
-let url = "https://gist.githubusercontent.com/kowaraj/f5af2adaefe33547949d4822ac09f863/raw/2101c14292b3cf9d38cb657ffee4be0151e78817/test_for_reasonml2.json"
+let url = "https://gist.githubusercontent.com/kowaraj/27434ded873153836c19019f1622d04f/raw/7ac24ac889e6af90fe623187472bcd11cc37a652/gist_for_reasonml3.json"
 
 
 

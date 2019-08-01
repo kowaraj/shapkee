@@ -6,6 +6,12 @@ type t = {
   paidby: Person.t,
 };
 
+let data_test_json_gist : list(t) = [
+//  url = "https://gist.github.com/kowaraj/e9070badf374c1fd8fd97d6bda6804cb"
+    
+//  {date: "2666-66-66", value: 66.66,  type_: EdF,      paidby: Andrey, ts: ("2666-66-66", "2666-66-66")}, // <-- fake bill: ? subscription fee?
+];
+
 let data : list(t) = [
 
   //test data, set #1
@@ -53,4 +59,8 @@ let print = (x) => {
   Js.log( str(x) );
 };
 
-let dump = () => { Js.log("List of Bills: ");  List.map(x=>print(x), data) |> ignore;  Js.log(" ");};
+let dump = () => { 
+
+Js.log("List of Bills: ");  List.map(x=>print(x), data) |> ignore;  Js.log(" ");
+
+};

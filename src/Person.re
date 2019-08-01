@@ -4,6 +4,16 @@ type t =
   | Andrey
   | Nicola;
 
+let ctor = (s : string) => {
+  switch (s) {
+    | "Andrey" => Andrey
+    | "Irene" => Irene
+    | "Nicola" => Nicola
+    | "Nobody" => Nobody
+    | _ => Nobody
+  }
+}
+
 let name = (p : t) => {
   switch (p){
   | Nobody => "nobody"
