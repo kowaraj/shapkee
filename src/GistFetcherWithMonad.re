@@ -34,18 +34,19 @@ module Decode = {
 
 };
 
+module PromiseMonad = {
+  let defer = (f):Js.Promise.t('a) => Js.Promise.make((~resolve,~reject as _) => ignore(f(resolve)));
+  let return = (a: 'a) : Js.Promise.t('a) => Js.Promise.resolve(a);
+  let (>>=) = (m: Js.Promise.t('a), f: 'a => Js.Promise.t('b))
+              => Js.Promise.then_(f, m);
+};
+
 let fetchBills = (url) => {
   Js.log(url)
   Js.Promise.(
     Fetch.fetch(url)
     |> then_(Fetch.Response.json)
-    |> then_({
-        json => 
-          { 
-          json |> Decode.bills |> (bs => { Js.log("!!!"); Js.log(bs); Some(bs) } |> resolve)
-        }
-      }
-       )
+    |> then_( json => json |> Decode.bills |> (bs => { Js.log("!!!"); Js.log(bs); Some(bs) } |> resolve) )
     |> catch( { _err => {Js.log(_err); resolve(None)} })
   )};
 

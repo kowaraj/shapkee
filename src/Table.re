@@ -16,7 +16,7 @@ let make = (data, s) => {
       
             <thead style=Style.h>
               <tr style=Style.h>
-                <th style=Style.tc1> {str("")} </th>
+                <th style=Style.tc1> {str("Who paid:")} </th>
                 <th style=Style.h> {str("for Irene")} </th>
                 <th style=Style.h> {str("for Andrey")} </th>
                 <th style=Style.h> {str("for  Nicola")} </th>
